@@ -50,10 +50,11 @@ def make_predictions():
     height = float(content["height"])
     weight = int(content["weight"])
     name_of_country = int(content["country"])
-    embarked = content["embarked"]
-    has_cabin = bool(int(content["has_cabin"]))
+    year = content["year"]
+    season = content["season"]
+    sport = content["sport"]
 
-    preds = modelHelper.makePredictions(sex_flag, age, fare, familySize, p_class, embarked, has_cabin)
+    preds = modelHelper.makePredictions(sex, age, height, weight, name_of_country, year, season, sport)
     return(jsonify({"ok": True, "prediction": str(preds)}))
 
 @app.after_request
