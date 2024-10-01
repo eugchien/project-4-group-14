@@ -46,13 +46,13 @@ def make_predictions():
 
     # parse
     sex = int(content["sex"])
-    age = float(content["age"])
-    height = float(content["height"])
+    age = int(content["age"])
+    height = int(content["height"])
     weight = int(content["weight"])
     name_of_country = int(content["country"])
-    year = content["year"]
-    season = content["season"]
-    sport = content["sport"]
+    year = int(content["year"])
+    season = int(content["season"])
+    sport = int(content["sport"])
 
     preds = modelHelper.makePredictions(sex, age, height, weight, name_of_country, year, season, sport)
     return(jsonify({"ok": True, "prediction": str(preds)}))
