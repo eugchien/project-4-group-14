@@ -14,7 +14,7 @@ function makePredictions() {
     var age = $("#age").val();
     var height = $("#height").val();
     var weight = $("#weight").val();
-    var country = $("#NOC").val();
+    var name_of_country = $("#NOC").val();
     var year = $("#year").val();
     var season = $("#season").val();
     var sport = $("#sport").val();
@@ -28,7 +28,7 @@ function makePredictions() {
         "age": age,
         "height": height,
         "weight": weight,
-        "country": country,
+        "name_of_country": name_of_country,
         "year": year,
         "season": season,
         "sport": sport
