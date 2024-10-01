@@ -6,22 +6,27 @@ class ModelHelper():
     def __init__(self):
         pass
 
-    def makePredictions(self, sex_flag, age, fare, familySize, p_class, embarked, has_cabin):
-        # create dataframe of one row for inference
+    def makePredictions(sex, age, height, weight, name_of_country, year, season, sport):
+    
+        # Dataframe
         df = pd.DataFrame()
-        df["Sex"] = [sex_flag]
+        df["Sex"] = [sex]
         df["Age"] = [age]
-        df["Fare"] = [fare]
-        df["Has_Cabin"] = [has_cabin]
-        df["Family_Size"] = [familySize]
-        df["Pclass"] = [p_class]
-        df["Embarked"] = [embarked]
-
-        # model
-        model = pickle.load(open("titanic_model_pipeline2.h5", 'rb'))
-
-        # columns in order
-        df = df.loc[:, ['Pclass', 'Sex', 'Age', 'Fare', 'Embarked', 'Has_Cabin', 'Family_Size']]
-
-        preds = model.predict_proba(df)
-        return(preds[0][1])
+        df["Height"] = [height]
+        df["Weight"] = [weight]
+        df["NOC"] = [name_of_country]
+        df["Year"] = [year]
+        df["Season"] = [season]
+        df["Sport"] = [sport]
+        
+        # Model
+        model = pickle.load(open("Olympic_model.h5", 'rb'))
+        
+        # Locate
+        df = df.loc[:, ['Sex', 'Age', 'Height', 'Weight', 'NOC', 'Year', 'Season', 'Sport']]
+        
+        # Predict
+        preds = model.predict(df)
+        
+        # Return Prediction
+        return preds[0]
