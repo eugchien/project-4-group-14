@@ -20,7 +20,7 @@ class ModelHelper():
         df["Sport"] = [sport]
         
         # Load Model
-        model = pickle.load(open("Olympic_model.h5", 'rb'))
+        model = pickle.load(open("Olympic_model.pkl", 'rb'))
         
         # Columns in Order
         df = df.loc[:, ['Sex', 'Age', 'Height', 'Weight', 'NOC', 'Year', 'Season', 'Sport']]

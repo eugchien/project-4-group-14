@@ -49,7 +49,7 @@ def make_predictions():
     age = content["age"]
     height = content["height"]
     weight = content["weight"]
-    name_of_country = content["country"]
+    name_of_country = content["name_of_country"]
     year = content["year"]
     season = content["season"]
     sport = content["sport"]
