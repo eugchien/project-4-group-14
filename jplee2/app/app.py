@@ -45,7 +45,7 @@ def make_predictions():
     print(content)
 
     # parse
-    sex = content["sex"]
+    sex = int(content["sex"])
     age = float(content["age"])
     height = float(content["height"])
     weight = int(content["weight"])

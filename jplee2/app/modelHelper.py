@@ -6,7 +6,7 @@ class ModelHelper():
     def __init__(self):
         pass
 
-    def makePredictions(sex, age, height, weight, name_of_country, year, season, sport):
+    def makePredictions(self, sex, age, height, weight, name_of_country, year, season, sport):
     
         # Dataframe
         df = pd.DataFrame()
@@ -19,7 +19,7 @@ class ModelHelper():
         df["Season"] = [season]
         df["Sport"] = [sport]
         
-        # Model
+        # Load Model
         model = pickle.load(open("Olympic_model.h5", 'rb'))
         
         # Columns in Order
