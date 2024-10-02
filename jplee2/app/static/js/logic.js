@@ -43,13 +43,9 @@ function makePredictions() {
         success: function(returnedData) {
             // print it
             console.log(returnedData);
-            var prob = parseFloat(returnedData["prediction"]);
+            var prob = (returnedData["prediction"]);
+            $("#output").text(`Our model predicts that a person of these traits would get a ${prob} medal!!!`);
 
-            if (prob > 0.5) {
-                $("#output").text(`You Survived with probability ${prob}!`);
-            } else {
-                $("#output").text(`You did not survive with probability ${prob}, sorry. :(`);
-            }
 
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
