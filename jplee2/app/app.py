@@ -21,7 +21,7 @@ def home():
 
 @app.route("/predict")
 def predict():
-    return render_template("index copy.html")
+    return render_template("index.html")
 
 @app.route("/dashboard1")
 def dashboard1():
