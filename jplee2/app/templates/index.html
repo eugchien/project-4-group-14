@@ -16,10 +16,13 @@
     <script type="text/javascript" src="static/js/logic.js"></script>
     <style>
         li {
-            font-size: 20px;
+            font-size: 14px;
+        }
+        p {
+            color: black;
+            font-size: 16px;
         }
     </style>
-
 </head>
 
 <body>
@@ -32,10 +35,10 @@
                         <a class="nav-link active" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/predict">Medal Prediction</a>
+                        <a class="nav-link" href="/predict">Medal Predictor</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/dashboard1"></a>
+                        <a class="nav-link" href="/dashboard1">Medal Breakdown</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/dashboard2">Olypmic Basketball</a>
@@ -50,13 +53,23 @@
             </ul>
         </div>
     </nav>
+    <div class="container-fluid">
+        <div class="col-md-12 text-center">
+            <h1>Medal Predictor</h1>
+        </div>
+        <div class="row">
+            <hr>
+            <div class="col-md-12 text-justify">
+                <h4>&emsp; Medal Prediction - This page allows you to make custom adjustments for the athlete's Sex, Age, Height, Weight, Country, Sport, and Season to make a prediction of whether they would win No Medal, Bronze, Silver, or Gold! </h4>          
+            </div>
+            <hr>
     <hr style="color:lightgray; border-width: 3px;">
     <div class="container">
         <div class="card border-primary mb-3" style="max-width: 20rem;">
             <div class="card-header">Filters</div>
             <div class="card-body">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-4">
                         <div class="form-group">
                             <label class="col-form-label" for="sex">Sex</label>
                             <select id="sex">
@@ -122,7 +135,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6 container-fluid">
                         <button type="button" class="btn btn-primary" id="filter">Make Prediction!</button>
                     </div>
                 </div>
@@ -132,12 +145,11 @@
     <hr style="color:lightgray; border-width: 3px;">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <h1 id="output"></h1>
             </div>
         </div>
     </div>
-
 </body>
 
 </html>
