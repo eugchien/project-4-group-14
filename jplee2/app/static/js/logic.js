@@ -44,7 +44,7 @@ function makePredictions() {
             // print it
             console.log(returnedData);
             var prob = (returnedData["prediction"]);
-            $("#output").text(`Our model predicts that this combination of characteristics would yield a ${prob} medal!!!`);
+            $("#output").text(`Our model predicts that this combination of characteristics would yield ${prob}!!!`);
 
 
         },
