@@ -21,6 +21,18 @@ Color Design Considerations
 Our main color palette for the project was the color of the Olympic rings, as shown below. The Olympic rings signifies the unity of the five continents and the Olympic athletes of various countries coming together. These bright, distinct colors are displayed throughout our web page and Tableau visualizations. We also used gold, silver, and bronze colors to represent the different medal types in certain visualizations. 
 
 
+Web App Development
+Our web application features six pages: a home page, medal predictor, Olympic medal breakdown, basketball analysis, and about us and work cited pages. All pages utilize Lux Bootswatch and custom inline CSS.
+
+The home page introduces the website and project premise. The medal predictor includes an interactive inference maker, allowing users to customize predictions, which are processed by our back-end model to predict podium placements. It also displays feature importance for user-selected categories, making it the most interactive page for engaging with our machine learning model.
+
+The 'Medal Breakdown' page embeds a Tableau dashboard for detailed analysis of Olympic competitiveness by country and sport. Similarly, the 'Olympic Basketball' page features another embedded Tableau dashboard.
+
+The 'About Us' page lists team members with links to their GitHub profiles, while the 'Work Cited' page provides interactive links to all project sources.
+
+The most challenging aspect was integrating our model using the modelHelper, which contained the prediction function from our Machine Learning algorithm. Additionally, learning to process user inputs in the back-end for meaningful results was complex.
+
+
 Dashboard Design Concepts - Part 1
 Our first Tableau dashboard focuses on medal breakdown, featuring a world map that displays each country's medal count. The size and color of the circles indicate the count, with larger circles representing more medals. The Olympic ring color palette is used, where blue signifies lower counts and red indicates higher counts. Users can filter by sport and medal type (gold, silver, bronze, no medal).
 
